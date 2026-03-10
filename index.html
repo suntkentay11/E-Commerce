@@ -6,6 +6,7 @@
     <title>Library</title>
     <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/41cda13e3c.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </head>
 <body>
     <section id="landing">
@@ -17,6 +18,19 @@
                     <li><a href="#contact" class="nav__link">Contact</a></li>
                     <li><a href="#books" class="nav__link nav__link--primary">Books</a></li>
                 </ul>
+                <button class="btn__menu" onclick="openMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="menu__backdrop">
+                    <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="menu__links">
+                        <li class="menu__list"><a href="#" class="menu__link"onclick="closeMenu()">Home</a></li>
+                        <li class="menu__list"><a href="#features" class="menu__link"onclick="closeMenu()">Books</a></li>
+                        <li class="menu__list"><a href="" class="menu__link no-cursor"onclick="closeMenu()">Contact</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <header>
@@ -24,7 +38,7 @@
                 <div class="header__description">
                    <h1>United State's most awarded online library platform</h1> 
                    <h2>Find your dream book with <span class="purple">Library</span></h2>
-                   <button class=btn>Browse Books</button>
+                   <a href="#features"><button class=btn>Browse Books</button></a>
                 </div>
                 <figure class="header__img--wrapper">
                     <img src="./assets/Undraw_Books.svg" alt="Books Illustration">
@@ -66,16 +80,16 @@
         <section id="features">
             <div class="container">
                 <div class="row">
-                    <h2 class="section__title">
+                    <h2 class="section__title--books">
                         Featured <span class="purple">Books</span>
                     </h2>
                     <div class="books">
                         <div class="book">
                             <figure>
-                                <img class="book__image" src="" alt="">
+                                <img class="book__image" src="./assets/Theo-of-Golden.jpeg" alt="Theo of Golden">
                             </figure>
                             <div class="book__title">
-                                BookTitle
+                                Theo of Golden: A Novel
                             </div>
                             <div class="book__ratings">
                                <i class="fas fa-star"></i>
@@ -85,7 +99,111 @@
                                <i class="fas fa-star-half-alt"></i>
                             </div>
                             <div class="book__price">
-                                <span class="book__price--normal"></span>
+                                <span class="book__price--normal">$20.00</span>$14.99
+                            </div>
+                        </div>
+                        <div class="book">
+                            <figure>
+                                <img class="book__image" src="./assets/The-Vanishing-Cherry-Blossom-Bookshop.jpeg" alt="The Vanishing Cherry Blossom Bookshop">
+                            </figure>
+                            <div class="book__title">
+                                The Vanishing Cherry Blossom Bookshop
+                            </div>
+                            <div class="book__ratings">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                            </div>
+                            <div class="book__price">
+                                <span class="book__price--normal">$12.99</span>$9.99
+                            </div>
+                        </div>
+                        <div class="book">
+                            <figure>
+                                <img class="book__image" src="./assets/Project-Hail-Mary.jpeg" alt="Project Hail Mary">
+                            </figure>
+                            <div class="book__title">
+                                Project Hail Mary
+                            </div>
+                            <div class="book__ratings">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <div class="book__price">
+                                <span class="book__price--normal">$22.00</span>$18.99
+                            </div>
+                        </div>
+                        <div class="book">
+                            <figure>
+                                <img class="book__image" src="./assets/Heated-Rivalry.jpeg" alt="Heated Rivalry">
+                            </figure>
+                            <div class="book__title">
+                                Heated Rivalry
+                            </div>
+                            <div class="book__ratings">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <div class="book__price">
+                                <span class="book__price--normal">$18.99</span>$16.99
+                            </div>
+                        </div>
+                        <div class="book">
+                            <figure>
+                                <img class="book__image" src="./assets/The-Correspondent.jpeg" alt="The Correspondent">
+                            </figure>
+                            <div class="book__title">
+                                The Correspondent: A Novel
+                            </div>
+                            <div class="book__ratings">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <div class="book__price">
+                                <span class="book__price--normal">$28.00</span>$25.00
+                            </div>
+                        </div>
+                        <div class="book">
+                            <figure>
+                                <img class="book__image" src="./assets/Wuthering-Heights.jpeg" alt="Wuthering Heights">
+                            </figure>
+                            <div class="book__title">
+                                Wuthering Heights
+                            </div>
+                            <div class="book__ratings">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                            </div>
+                            <div class="book__price">
+                                <span class="book__price--normal">$9.00</span>$6.99
+                            </div>
+                        </div>
+                        <div class="book">
+                            <figure>
+                                <img class="book__image" src="./assets/The-Let-Them-Theory.jfif" alt="The Let Them Theory">
+                            </figure>
+                            <div class="book__title">
+                                The Let Them Theory
+                            </div>
+                            <div class="book__ratings">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                            </div>
+                            <div class="book__price">
+                                <span class="book__price--normal">$29.99</span>$24.99
                             </div>
                         </div>
                     </div>
@@ -95,10 +213,184 @@
         <section id="recent">
             <div class="container">
                 <div class="row">
-
+                    <h2 class="section__title--recents">
+                        Recent <span class="purple">Books</span>
+                    </h2>
+                    <div class="books">
+                        <div class="book">
+                            <figure>
+                                <img class="book__image" src="./assets/The-Golden-Boy.jpeg" alt="The Golden Boy">
+                            </figure>
+                            <div class="book__title">
+                                The Golden Boy
+                            </div>
+                            <div class="book__ratings">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <div class="book__price">
+                                <span class="book__price--normal">$29.00</span>$26.00
+                            </div>
+                        </div>
+                        <div class="book">
+                            <figure>
+                                <img class="book__image" src="./assets/vigil.jpeg" alt="Vigil">
+                            </figure>
+                            <div class="book__title">
+                                Vigil: A Novel
+                            </div>
+                            <div class="book__ratings">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                            </div>
+                            <div class="book__price">
+                                <span class="book__price--normal">$28.00</span>$25.00
+                            </div>
+                        </div>
+                        <div class="book">
+                            <figure>
+                                <img class="book__image" src="./assets/The-Unlikely-Tale-of-Chase&Finnegan.jpeg" alt="The Unlikely Tale of Chase & Finnegan">
+                            </figure>
+                            <div class="book__title">
+                                The Unlikely Tale of Chase & Finnegan
+                            </div>
+                            <div class="book__ratings">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <div class="book__price">
+                                <span class="book__price--normal">$18.99</span>$15.99
+                            </div>
+                        </div>
+                        <div class="book">
+                            <figure>
+                                <img class="book__image" src="./assets/The-Best-Dog-In-the-World.jpeg" alt="The Best Dog in the World">
+                            </figure>
+                            <div class="book__title">
+                                The Best Dog in the World
+                            </div>
+                            <div class="book__ratings">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                            </div>
+                            <div class="book__price">
+                                <span class="book__price--normal">$22.00</span>$18.00
+                            </div>
+                        </div>
+                        <div class="book">
+                            <figure>
+                                <img class="book__image" src="./assets/Once-and-Again.jpeg" alt="Once and Again">
+                            </figure>
+                            <div class="book__title">
+                                Once and Again: A Novel
+                            </div>
+                            <div class="book__ratings">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <div class="book__price">
+                                <span class="book__price--normal">$27.00</span>$24.00
+                            </div>
+                        </div>
+                        <div class="book">
+                            <figure>
+                                <img class="book__image" src="./assets/My-Husband's-Wife.jpeg" alt="My Husband's Wife">
+                            </figure>
+                            <div class="book__title">
+                                My Husband's Wife: A Novel
+                            </div>
+                            <div class="book__ratings">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                            </div>
+                            <div class="book__price">
+                                <span class="book__price--normal">$28.99</span>$25.99
+                            </div>
+                        </div>
+                        <div class="book">
+                            <figure>
+                                <img class="book__image" src="./assets/Operation-Bounce-House.jpeg" alt="Operation Bounce House">
+                            </figure>
+                            <div class="book__title">
+                                Operation Bounce House
+                            </div>
+                            <div class="book__ratings">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <div class="book__price">
+                                <span class="book__price--normal">$32.00</span>$29.00
+                            </div>
+                        </div>
+                        <div class="book">
+                            <figure>
+                                <img class="book__image" src="./assets/The-Crossroads.jpeg" alt="The Crossroads">
+                            </figure>
+                            <div class="book__title">
+                                The Crossroads
+                            </div>
+                            <div class="book__ratings">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                            </div>
+                            <div class="book__price">
+                                <span class="book__price--normal">$32.00</span>$22.40
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="explore">
+            <div class="container">
+                <div class="row">
+                    <h2>Explore more <span class="purple">Books</span></h2>
+                    <a href="#features">
+                        <button class="btn">Browse books</button>
+                    </a>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <a href="#">
+                    <figure class="footer__logo">
+                        <img src="./assets/Library.svg" class="footer__logo--img">
+                    </figure>
+                </a>
+                <div class="footer__list">
+                    <a href="" class="footer__link">Home</a>
+                    <a href="" class="footer__link no-cursor">About</a>
+                    <a href="" class="footer__link">Books</a>
+                    <a href="" class="footer__link no-cursor">Contact</a>
+                </div>
+                <div class="footer__copyright">Copyright &copy; 2026 Library</div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
