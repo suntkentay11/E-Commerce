@@ -342,7 +342,7 @@ FEATURES
     scroll-snap-align: start;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: not-allowed;
-    z-index: 2;****
+    z-index: 2;
 }
 
 .book:hover{
@@ -380,6 +380,25 @@ FEATURES
     text-decoration: line-through;
     color: #777;
     margin-right: 6px;
+}
+
+.arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+    color: #7342d6;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.arrow--left{
+    left: 100px;
+}
+
+.arrow--right{
+    right: 100px;
 }
 
 /* 
@@ -422,6 +441,64 @@ EXPLORE
     background-color: rgba(115, 66, 214, 0.1);
 }
 
+/* 
+
+BOOKS
+
+*/
+
+#books__main{
+    background-color: rgba(115, 66, 214, 0.1);
+}
+
+#filter{
+    width: 15%;
+    margin-left: 24px;
+    padding: 4px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 24px;
+}
+
+.books__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+}
+
+#books__main .books{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#books__main .book{
+    width: calc(100% / 4 - 20px);
+}
+
+#books__main .book__title{
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+#books__main .book__ratings{
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+#books__main .book__price{
+    font-size: 16px;
+    margin: 4px 0;
+}
+
+#books__main .book__price--normal{
+    font-size: 14px;
+    margin: 4px 0;
+}
 
 /* 
 
@@ -443,7 +520,7 @@ footer{
 }
 
 .footer__link, .footer__copyright{
-    color: white
+    color: white;
 }
 
 .footer__list{
